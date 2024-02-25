@@ -6,4 +6,4 @@ Designed with simplicity and functionality in mind, our calendar helps you stay 
 ## Installation
 
 npm install<br>
-npm run dev - to run on local
+npm run dev (to run on local)
