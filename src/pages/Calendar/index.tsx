@@ -4,9 +4,9 @@ import moment from "moment";
 //import events from "./events";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { Box } from "@chakra-ui/react";
+import { useToast } from "@chakra-ui/react";
 
 const now = new Date();
-
 const events = [
   {
     id: 0,
@@ -190,6 +190,7 @@ const CustomCalendar = () => {
   moment.locale("en-GB");
   const localizer = momentLocalizer(moment);
   const [eventsData, setEventsData] = useState(events);
+  const toast = useToast();
 
   const handleSelect = ({ start, end }) => {
     const title = window.prompt("New Event name");
@@ -202,6 +203,12 @@ const CustomCalendar = () => {
           title,
         },
       ]);
+    toast({
+      title: "Event Added Successfully!",
+      status: "success",
+      duration: 3500,
+      isClosable: true,
+    });
   };
   return (
     <Box p={5}>

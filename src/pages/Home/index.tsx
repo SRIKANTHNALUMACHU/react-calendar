@@ -12,7 +12,6 @@ import {
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { ReactNode, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import CustomCalendar from "../Calendar";
 const Home = () => {
   const navigate = useNavigate();
   const isLoggedIn = localStorage.getItem("isLoggedIn");
